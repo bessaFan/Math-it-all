@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<head>
+	<title>Math it all!</title>
+	<!-- favicon -->
+	<link rel="shortcut icon" href="static/favicon.ico">
+	<!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"> -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+	<!-- <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script> -->
+	<link href="static/css/bootstrap.min.css" rel="stylesheet">
+	<link href="static/node_modules/bootstrap-colorpicker/dist/css/bootstrap-colorpicker.css" rel="stylesheet">
+	<link rel="stylesheet" href="./static/css/app.css">
+	<script>
+		function setVisible() {
+			document.getElementById("arithemetic_trick").style.visibility = "visible";
+		}
+		function calculatetn(){
+			// resulta.value=parseInt(termValue1.value)-parseInt(resultd.value)*(parseInt(termNumber1.value)-1);
+			// resulta.value=parseInt(resultd.value)*(parseInt(termNumber1.value)-1);
+			// document.getElementById("resulta").innerHTML=parseInt(document.getElementById("termValue1"))-((parseInt(document.getElementById("resultd"))*(parseInt(document.getElementById("termNumber1"))-1));
+			document.getElementById("resultTN").innerHTML= "tn = "+ document.getElementById("resulta").innerHTML + " + " +document.getElementById("resultd").innerHTML+"(n-1)";
+		}
+	</script>
+</head>
+
+<body>
+	<!-- Header with logo-->
+	<div class="row" > 
+		<div class="header col-md-12" >
+			<span>
+				<span class="header-text">MATH IT ALL!</span>
+				<img src="static/favicon.ico" style="height:39px; right: 235px;" class="header-img">
+			</span>
+		</div>
+	</div>
+
+
+	<div class="col-sm-12">
+	<!-- calculating sequences -->
+		<h2 style="padding-top: 15px; border-bottom: 1px solid rgba(18, 65, 69, .07);" >CALCULATING SEQUENCES </h2>
+		<!-- arithemetic sequence 1 -->
+		<div class="col-sm-6">
+			<form oninput="result.value=parseInt(CommonDifference.value)*(parseInt(TermNumber.value)-1)+parseInt(FirstTerm.value)" class="form-horizontal" >
+				 
+				<h3 >Arithemetic Sequence </h3> 
+				<div class="col-sm-7" >
+					<h6>To obtain the result, simple add the product of one less than the term number and the common difference to the first term.</h6>
+				</div>
+				<br><br><br><br>
+				<h4 >Given: </h4> 
+				<div class="form-group" style="padding-bottom: 5px;">
+					<label for="inputEmail3" class="col-sm-3 control-label">Common Difference</label>
+					<div class="col-sm-4">
+						<input type="number"  class="form-control" name = "CommonDifference" id="number" placeholder="d">
+					</div>
+				</div>
+				<div class="form-group">
+					<label for="inputEmail3" class="col-sm-3 control-label">First term</label>
+					<div class="col-sm-4">
+						<input type="number" class="form-control" name = "FirstTerm" id="number" placeholder="a">
+					</div>
+				</div>
+				<h4 >Required: </h4> 
+				<div class="form-group">
+					<label for="inputEmail3" class="col-sm-3 control-label">Term to be calculated</label>
+					<div class="col-sm-4">
+						<!-- <input type="range" id="number" value="100"> -->
+						<!-- <output number></output> -->
+						<input type="number" class="form-control" name = "TermNumber" id="number" placeholder="n">
+					</div>
+				</div>
+
+				<h4 >Answer: </h4> 
+				<div>
+					<label for="inputEmail3" class="col-sm-3 control-label">(Real time update)</label>
+					<div class="col-sm-3">
+						<output class="btn btn-danger" id= "result" name="result" style="padding: 17px 85px;background-color: white; color: black; border: 2px solid #d1d1e0;" for="CommonDifference FirstTerm TermNumber"></output>
+					</div>
+				</div>
+				<br><br>
+				<div class="form-group">
+					<div class="col-sm-offset-5 col-sm-5" >
+						<button class="btn btn-danger" style="opacity: 0.6; border-width: 0px; z-index: 100;" >Reset!!</button>
+					</div>
+				</div>
+			</form>
+		</div>
+
+
+		<!-- arithemetic sequence 2 -->
+		<div class="col-sm-6">
+		<!-- a=tn-d*(n-1) -->
+		<!-- a=4-(-1) -->
+			<form oninput="resultd.value=(parseInt(termValue2.value)-parseInt(termValue1.value))/(parseInt(termNumber2.value)-parseInt(termNumber1.value));  resulta.value=parseInt(resultd.value); calculatetn() " class="form-horizontal" >
+			<!-- parseInt(termNumber1.value-1) 
+			resulta.value=parseInt(termValue1.value)-parseInt(resultd.value)*(parseInt(termNumber1.value)-1); -->
+
+				<h3 >Arithemetic Sequence </h3> 
+				<div class="col-sm-7" >
+					<h6>To obtain the result, simple add the product of one less than the term number and the common difference to the first term.</h6>
+				</div>
+				<br><br><br><br>
+				<h4 >Given: </h4> 
+				<div class="form-group" style="padding-bottom: 5px;">
+					<label for="inputEmail3" class="col-sm-3 control-label">First Term Number</label>
+					<div class="col-sm-4">
+						<input type="number"  class="form-control" name = "termNumber1" id="number" placeholder="d">
+					</div>
+				</div>
+								<div class="form-group" style="padding-bottom: 5px;">
+					<label for="inputEmail3" class="col-sm-3 control-label">First Term Value</label>
+					<div class="col-sm-4">
+						<input type="number"  class="form-control" name = "termValue1" id="number" placeholder="d">
+					</div>
+				</div>				<div class="form-group" style="padding-bottom: 5px;">
+					<label for="inputEmail3" class="col-sm-3 control-label">Second Term Number</label>
+					<div class="col-sm-4">
+						<input type="number"  class="form-control" name = "termNumber2" id="number" placeholder="d">
+					</div>
+				</div>
+								<div class="form-group" style="padding-bottom: 5px;">
+					<label for="inputEmail3" class="col-sm-3 control-label">Second Term Value</label>
+					<div class="col-sm-4">
+						<input type="number"  class="form-control" name = "termValue2" id="number" placeholder="d">
+					</div>
+				</div>
+				<h4 >Answer: </h4> 
+				<div>
+					<label for="inputEmail3" class="col-sm-3 control-label">Common Difference</label>
+					<div class="col-sm-3">
+						<output class="btn btn-danger" id= "resultd" name="resultd" style="padding: 17px 85px;background-color: white; color: black; border: 2px solid #d1d1e0;" for="termNumber1 termValue1 termNumber2 termValue2 resultd"></output>
+					</div>
+				</div>
+				<br><br><br>
+				<div>
+					<label for="inputEmail3" class="col-sm-3 control-label">tn1</label>
+					<div class="col-sm-3">
+						<output class="btn btn-danger" id= "resulta" name="resulta" style="padding: 17px 85px;background-color: white; color: black; border: 2px solid #d1d1e0;" for="termNumber1 termValue1 termNumber2 termValue2"></output>
+					</div>
+				</div>
+				<br><br><br>
+				<div>
+					<label for="inputEmail3" class="col-sm-3 control-label">tn</label>
+					<div class="col-sm-3">
+						<output class="btn btn-danger" id= "resultTN" name="resultTN" style="padding: 17px 85px;background-color: white; color: black; border: 2px solid #d1d1e0;" for="termNumber1 termValue1 termNumber2 termValue2"></output>
+					</div>
+				</div>
+				<div class="form-group">
+					<div class="col-sm-offset-5 col-sm-5" >
+						<button class="btn btn-danger" style="opacity: 0.6; border-width: 0px; z-index: 100;" >Reset!!</button>
+					</div>
+				</div> -->
+			</form>
+		</div>
+
+	</div>
+</body>
+
+<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<!-- Include all compiled plugins (below), or include individual files as needed -->
+<script src="static/js/bootstrap.min.js"></script>
+<script src="static/node_modules/bootstrap-colorpicker/dist/js/bootstrap-colorpicker.min.js" rel="stylesheet"></script>
